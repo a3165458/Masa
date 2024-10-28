@@ -205,7 +205,7 @@ function main_menu() {
     echo "节点社区 Telegram 频道:https://t.me/niuwuriji"
     echo "========================= Masa Oracle 安装脚本 ========================="
     echo "请选择要执行的操作:"
-    echo "1. 安装 Masa Oracle"
+    echo "1. 安装 Masa Oracle 节点"
     echo "2. 查看日志"
     echo "3. 退出"
     echo "4. 获取Multipass"
