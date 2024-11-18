@@ -10,6 +10,8 @@ if [ "$(id -u)" != "0" ]; then
     exit 1
 fi
 
+apt install make sudo curl -y
+
 # 检查并安装 Go
 function install_go() {
     echo "更新软件包列表..."
@@ -76,7 +78,7 @@ function install_git() {
 # 克隆 Masa Oracle 合约
 function clone_masa_oracle() {
     echo "克隆 Masa Oracle 合约..."
-    git clone https://github.com/masa-finance/masa-oracle.git "$MASA_ORACLE_PATH"
+    git clone -b v0.8.6  https://github.com/masa-finance/masa-oracle.git "$MASA_ORACLE_PATH"
     cd "$MASA_ORACLE_PATH/contracts" || exit
     echo "安装 npm 依赖..."
     npm install
